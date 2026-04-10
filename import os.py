@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 def limpar_tela():
-    """Limpa o terminal."""
+    """Limpa o terminal pois evita de deixar muita coisa no terminal"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -13,7 +13,7 @@ def pausar():
 
 
 def adicionar_tarefa():
-    """Adiciona uma nova tarefa com data e status."""
+    """Ao adiconar uma tarefa mostrará tanto hora e data de adição da tarefa."""
     limpar_tela()
     print("=== ADICIONAR TAREFA ===")
 
@@ -25,7 +25,7 @@ def adicionar_tarefa():
     with open("tarefas.txt", "a", encoding="utf-8") as arquivo:
         arquivo.write(registro)
 
-    print("\n✅ Tarefa adicionada com sucesso!")
+    print("\n Tarefa adicionada com sucesso!")
     pausar()
 
 
@@ -39,7 +39,7 @@ def listar_tarefas():
             tarefas = arquivo.readlines()
 
             if not tarefas:
-                print("\n📂 Nenhuma tarefa cadastrada.")
+                print("\n Nenhuma tarefa cadastrada.")
                 pausar()
                 return []
 
@@ -50,7 +50,7 @@ def listar_tarefas():
             return tarefas
 
     except FileNotFoundError:
-        print("\n⚠️ Nenhuma tarefa cadastrada ainda.")
+        print("\n Nenhuma tarefa cadastrada ainda.")
         pausar()
         return []
 
@@ -62,23 +62,28 @@ def concluir_tarefa():
         return
 
     try:
+        """Pede ao usuário o número da tarefa que ele quer concluir"""
         numero = int(input("\nDigite o número da tarefa concluída: "))
 
+        """Verifica se o número está dentro do tamanho da lista"""
         if 1 <= numero <= len(tarefas):
+
+            """Checa se a tarefa já foi concluída antes"""
             if "[✔]" in tarefas[numero - 1]:
-                print("\n⚠️ Tarefa já está concluída.")
+                print("\n Tarefa já está concluída.")
             else:
                 tarefas[numero - 1] = tarefas[numero - 1].replace("[ ]", "[✔]")
 
+                """Salva todas as tarefas novamente no arquivo só que atualizado"""
                 with open("tarefas.txt", "w", encoding="utf-8") as arquivo:
                     arquivo.writelines(tarefas)
 
-                print("\n✅ Tarefa marcada como concluída!")
+                print("\n Tarefa marcada como concluída!")
         else:
-            print("\n❌ Número inválido.")
+            print("\n Número inválido.")
 
     except ValueError:
-        print("\n❌ Digite um número válido.")
+        print("\n Digite um número válido.")
 
     pausar()
 
@@ -98,12 +103,12 @@ def remover_tarefa():
             with open("tarefas.txt", "w", encoding="utf-8") as arquivo:
                 arquivo.writelines(tarefas)
 
-            print("\n🗑️ Tarefa removida com sucesso!")
+            print("\n Tarefa removida com sucesso!")
         else:
-            print("\n❌ Número inválido.")
+            print("\n Número inválido.")
 
     except ValueError:
-        print("\n❌ Digite um número válido.")
+        print("\n Digite um número válido.")
 
     pausar()
 
@@ -134,7 +139,7 @@ def menu():
             print("Encerrando o sistema...")
             break
         else:
-            print("\n❌ Opção inválida!")
+            print("\n Opção inválida!")
             pausar()
 
 
