@@ -2,7 +2,7 @@
 
 # Sistema de Registro de Tarefas em Python
 
-Este projeto é uma aplicação simples para gerenciamento de tarefas, desenvolvida em Python. O objetivo é tornar facil o registro e acompanhamento das atividades diárias de forma prática e boa resumidamente. 
+Este projeto é uma aplicação simples para gerenciamento de tarefas, desenvolvida em Python. O objetivo é tornar facil o registro e acompanhamento das atividades diárias de forma prática e boa.
 
 ## Funcionalidades
 - Adicionar, remover e listar tarefas.
