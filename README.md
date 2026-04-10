@@ -7,7 +7,9 @@ Este projeto é uma aplicação simples para gerenciamento de tarefas, desenvolv
 ## Funcionalidades
 - Adicionar, remover e listar tarefas.
 - Interface simples baseada em menu no terminal, bem simples.
-- As tarefas são salvas em arquivo texto com um padrão de status, data e descrição.
+- As tarefas são salvas em arquivo (txt.)
+- Registro de data e hora das tarefas
+- mostrar as tarefas numeradas
 
 ## Integrantes
 - Alain Roel
