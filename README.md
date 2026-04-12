@@ -13,8 +13,9 @@ Este projeto é uma aplicação simples para gerenciamento de tarefas, desenvolv
 
 ## Integrantes
 - Alain Roel
-- Nicolas Henrique 
+- Adriano Nunes 
 - Maria Rita
+- Nicolas Henrique
 ## Como botar para funcionar?
 Copie o código, cole no VS Code, salve o arquivo e execute o programa. 
 
