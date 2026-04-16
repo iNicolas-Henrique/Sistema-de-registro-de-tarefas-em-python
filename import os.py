@@ -13,7 +13,7 @@ def pausar():
 
 
 def adicionar_tarefa():
-    """Ao adiconar uma tarefa mostrará tanto hora e data de adição da tarefa."""
+    """Ao adicionar uma tarefa mostrará tanto hora e data de adição da tarefa."""
     limpar_tela()
     print("=== ADICIONAR TAREFA ===")
 
